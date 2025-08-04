@@ -21,10 +21,3 @@
         name: httpd
         state: started
         enabled: true
-
-    - name: Adding http in firewalld
-      ansible.posix.firewalld:
-        service: http
-        state: enabled
-        permanent: true
-        immediate: true
