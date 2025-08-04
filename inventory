@@ -1,0 +1,11 @@
+[prod]
+servera.lab.example.com
+serverb.lab.example.com
+
+[test]
+serverc.lab.example.com
+serverd.lab.example.com
+
+[dev]
+servere.lab.example.com
+serverf.lab.example.com
