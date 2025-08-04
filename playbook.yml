@@ -1,0 +1,30 @@
+---
+- name: Setting up a web server
+  hosts: prod
+  become: true
+  tasks: 
+
+    - name: Ensure that httpd and firewalld packages are installed
+      ansible.builtin.dnf: 
+        name: 
+          - httpd
+          - firewalld
+        state: present
+
+    - name: Copy index.html
+      ansible.builtin.copy: 
+        src: index.html
+        dest: /var/www/html/index.html
+
+    - name: Ensure that httpd service is started and enabled
+      ansible.builtin.service: 
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Adding http in firewalld
+      ansible.posix.firewalld:
+        service: http
+        state: enabled
+        permanent: true
+        immediate: true
