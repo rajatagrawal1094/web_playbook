@@ -1,6 +1,0 @@
----
-- name: testing custom collections
-  hosts: servera.lab.example.com
-  become: true
-  roles: 
-    - role: test.new_collections.user
