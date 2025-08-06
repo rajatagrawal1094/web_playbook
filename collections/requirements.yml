@@ -1,3 +1,6 @@
 ---
 collections: 
-  - test.new_collections
+  - name: test.new_collections
+    version: 1.0.0
+    source: https://aap.lab.example.com/pulp_ansible/galaxy/published/
+
