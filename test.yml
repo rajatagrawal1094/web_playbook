@@ -1,0 +1,7 @@
+---
+- name: testing
+  hosts: servera.lab.example.com
+  roles:
+    - role: test.new_collection.user
+      usr: rajat
+      pswd: redhat
