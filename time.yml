@@ -1,3 +1,4 @@
 ---
 - name: This is a time playbook
   hosts: iosxe1.lab.example.com
+  become: true
